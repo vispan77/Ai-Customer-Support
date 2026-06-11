@@ -2,11 +2,10 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from "motion/react";
-import LoginModal from '@/pages/LoginModal';
+import LoginModal from '@/components/LoginModal';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserData } from '@/redux/slice/userSlice';
-import { LogOut } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 
