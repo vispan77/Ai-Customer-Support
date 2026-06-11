@@ -51,10 +51,10 @@ function EmbedClient({ ownerId }: { ownerId: string }) {
                     transition={{ duration: 0.5 }}
                     className="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-10"
                 >
-                    <h1>
+                    <h1 className='text-2xl font-semibold mb-2'>
                         Embed ChatBot
                     </h1>
-                    <p className="mb-5">
+                    <p className='mb-5'>
                         Copy and paste this code before <code>&lt;/body&gt;</code>
                     </p>
 
@@ -82,7 +82,7 @@ function EmbedClient({ ownerId }: { ownerId: string }) {
                         <li>Reload your website</li>
                     </ul>
 
-                    <div className="mt-14">
+                    <div className="mt-10">
                         <h1 className="text-lg font-medium mb-2">
                             Live Preview
                         </h1>

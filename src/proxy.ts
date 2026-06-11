@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
     try {
         const token = req.cookies.get("token");
 
@@ -20,5 +20,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/dashboard/:path*"],
+    matcher: ["/dashboard/:path*", "/embed/:path*"]
 };
