@@ -4,9 +4,9 @@ import jwt from "jsonwebtoken";
 
 const getUser = async (token: string) => {
     try {
-        const decode = jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET!);
+        const decode = jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET!) as { id: string };
 
-        const user = await User.findById({ _id: decode.id });
+        const user = await User.findById(decode.id);
 
         return user;
 
